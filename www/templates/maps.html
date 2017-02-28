@@ -1,0 +1,23 @@
+<ion-view view-title="Maps">
+  <ion-content>
+<div>
+ <ng-map zoom="3" >
+ 	<marker position="marker.position" animation="Animation.BOUNCE" ></marker>
+ <marker ng-repeat = "user in users " title="{{ user.name }}" position="{{ user.adress }}"></marker>
+ </ng-map>
+</div>
+<div class="bar bar-header item-input-inset">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" ng-model="recherche" placeholder="Search">
+  </label>
+</div>
+
+<div class="main" ng-repeat = "user in users | filter:recherche">
+	<ul class="list" >
+	  	<li class="item"> <a href="#/app/playlists/{{user.idUser}}"><h2><strong>{{ user.lastname }} {{ user.name }}</strong></a>  
+	  	{{ user.adress }} </h2></li></ul>
+</div>
+
+  </ion-content>
+</ion-view>

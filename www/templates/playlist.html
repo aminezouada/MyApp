@@ -1,0 +1,13 @@
+<ion-view view-title="Playlist">
+  <ion-content>
+  <ng-map zoom="3" >
+ <marker title="{{ user.name }}" position="{{ user.adress }}" ></marker>
+ </div>
+ </ng-map>
+    <div class="main">
+
+  		<p class="item"><img src="{{ user.avatar }}"><button><a href="#/app/playlists/edit/{{user.idUser}}">Modifier</a></button><br><strong>{{ user.lastname }} {{ user.name }} </strong>
+  		<br> adress : {{ user.adress }} <br> Age :{{ user.age }} <br> Phone : {{user.phone }}</p>
+	</div>
+  </ion-content>
+</ion-view>
